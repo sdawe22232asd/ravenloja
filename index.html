@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAVEM COMMUNITY | Loja Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">RAVEN COMMUNITY #TOP1</div>
+                <ul class="nav-links">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#" id="open-terms">Termos</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="https://discord.gg/2MAvArcxdq" target="_blank" class="discord-nav-link">
+                        <i class="fab fa-discord"></i> Entrar no Discord
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bases & Scripts Premium</h1>
+                <p>Otimize seu servidor com as melhores bases e scripts da Raven Community. Entrega via Discord.</p>
+                <a href="#produtos" class="btn btn-primary">Ver Catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <main class="main-content container" id="produtos">
+        <h2 class="section-title">PRODUTOS RAVEN</h2>
+        <div class="product-grid" id="product-grid">
+            <!-- Products loaded via JS -->
+        </div>
+    </main>
+
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="modal-overlay hidden">
+        <div class="modal-content terms-content">
+            <div class="modal-header">
+                <h2>Termos de Compra</h2>
+                <span id="close-terms" class="close-btn">&times;</span>
+            </div>
+            <div class="terms-body text-left">
+                <p><strong>1. Entrega:</strong> Todos os produtos (scripts e bases) são entregues via Discord após a confirmação do pagamento.</p>
+                <p><strong>2. Reembolso:</strong> Por se tratar de produtos digitais com acesso imediato, não oferecemos reembolso após a entrega do arquivo.</p>
+                <p><strong>3. Suporte:</strong> O suporte é oferecido exclusivamente através de tickets em nosso Discord oficial.</p>
+                <p><strong>4. Uso:</strong> É proibida a revenda ou redistribuição de qualquer script ou base adquirida na Raven Community.</p>
+                <p><strong>5. Instalação:</strong> Não nos responsabilizamos por erros causados por modificações feitas pelo usuário após a entrega.</p>
+            </div>
+            <button id="close-terms-btn" class="btn btn-primary btn-block">Eu entendo</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Raven Community Store. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
