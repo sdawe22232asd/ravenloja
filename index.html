@@ -41,6 +41,39 @@
     <!-- Products Grid -->
     <main class="main-content container" id="produtos">
         <h2 class="section-title">PRODUTOS RAVEN</h2>
+        <section class="support-options" aria-labelledby="support-options-title">
+            <div class="support-category">
+                <div class="support-category-header">
+                    <span class="support-eyebrow">Categoria</span>
+                    <h3 id="support-options-title">Escolha o atendimento</h3>
+                    <p>Selecione abaixo como quer falar com a equipe.</p>
+                </div>
+                <div class="support-option-list" role="radiogroup" aria-label="Opções de atendimento">
+                    <button type="button" class="support-option selected" data-support-option="Discord" aria-pressed="true">
+                        <span class="support-option-icon"><i class="fab fa-discord"></i></span>
+                        <span>
+                            <strong>Discord</strong>
+                            <small>Entrar no servidor e falar com a equipe.</small>
+                        </span>
+                    </button>
+                    <button type="button" class="support-option" data-support-option="WhatsApp" aria-pressed="false">
+                        <span class="support-option-icon"><i class="fab fa-whatsapp"></i></span>
+                        <span>
+                            <strong>WhatsApp</strong>
+                            <small>Atendimento rápido pelo celular.</small>
+                        </span>
+                    </button>
+                    <button type="button" class="support-option" data-support-option="Ticket" aria-pressed="false">
+                        <span class="support-option-icon"><i class="fas fa-headset"></i></span>
+                        <span>
+                            <strong>Ticket</strong>
+                            <small>Abrir um chamado com o suporte.</small>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <p id="selected-support-option" class="selected-support-option">Atendimento selecionado: Discord</p>
+        </section>
         <div class="product-grid" id="product-grid">
             <!-- Products loaded via JS -->
         </div>
