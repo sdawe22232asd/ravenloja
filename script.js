@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const productGrid = document.getElementById('product-grid');
     const discordLink = "https://discord.gg/2MAvArcxdq";
+    const supportOptions = document.querySelectorAll('.support-option');
+    const selectedSupportOption = document.getElementById('selected-support-option');
+    let currentSupportOption = 'Discord';
 
     const products = [
         {
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>${product.name}</h3>
                     <p class="product-desc">${product.description}</p>
                     <span class="price">R$ ${product.price.toFixed(2)}</span>
-                    <a href="${discordLink}" target="_blank" class="btn btn-primary btn-block">
+                    <a href="${discordLink}" target="_blank" class="btn btn-primary btn-block js-buy-button">
                         <i class="fab fa-discord"></i> Comprar via Discord
                     </a>
                 </div>
@@ -48,6 +51,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial Load
     loadProducts();
+
+    function updateBuyButtons() {
+        document.querySelectorAll('.js-buy-button').forEach(button => {
+            button.innerHTML = `<i class="fas fa-headset"></i> Atendimento: ${currentSupportOption}`;
+        });
+    }
+
+    supportOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            currentSupportOption = option.dataset.supportOption;
+
+            supportOptions.forEach(item => {
+                const isSelected = item === option;
+                item.classList.toggle('selected', isSelected);
+                item.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+            });
+
+            selectedSupportOption.textContent = `Atendimento selecionado: ${currentSupportOption}`;
+            updateBuyButtons();
+        });
+    });
+
+    updateBuyButtons();
 
     // Terms Modal Logic
     const termsModal = document.getElementById('terms-modal');
